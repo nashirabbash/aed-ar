@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "react-doctor/no-unknown-property": "off",
+    "deslop/unused-file": "off"
+  }
+}
