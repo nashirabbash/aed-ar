@@ -13,7 +13,9 @@ type SimMode =
   | "aed-button-test"
   | "marker-test";
 
-const xrStore = createXRStore({ domOverlay: true });
+const xrStore = createXRStore({
+  domOverlay: () => document.getElementById("xr-overlay") ?? undefined,
+});
 
 function enterAR() {
   xrStore.enterAR();
