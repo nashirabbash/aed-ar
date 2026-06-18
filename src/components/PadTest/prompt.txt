@@ -1,0 +1,73 @@
+create new test scene for test grab and release Pad
+
+set AED, Bolt Button, Power Button into one local position
+set Phantom in left camera, AED in Right Camera with pad in front AED, objek objek ini, tidak terikat global orbit, mereka terikat dengan local position, sehingga ketika camera berpindah view, mereka tidak ikut berpindah, with detail position:
+
+phantom position:
+y = -50.738 cm
+x = 0 cm
+z = 21.586 cm
+
+group of AED and button position:
+x = -36.1924 cm
+y = 51.5889 cm
+z = 12.5587 cm
+rotation:
+z = 50 degree
+y = 0 degree
+x = 0 degree
+
+pad position:
+x = -15.7509 cm
+y = 32.0655 cm
+z = 11.7888 cm
+
+nice, next, perbaiki grab pad, dimana ketika saya grab malah mental, dan tidak bisa di grab/dibawa tangan
+
+"Analyzing heart rhythm."
+"Do not touch the patient."
+
+(jeda 5–15 detik)
+
+"Shock advised."
+"Stand clear."
+"Delivering shock."
+"Shock delivered."
+
+(jeda 1–3 detik)
+
+"It is safe to touch the patient."
+"Begin CPR now."
+"Give chest compressions."
+
+(CPR selama ±2 menit)
+
+"Stop CPR."
+"Analyzing heart rhythm."
+"Do not touch the patient."
+
+(jeda 5–15 detik)
+
+"No shock advised."
+"Begin CPR now."
+
+yg muncul bukan hanya phantom saja, kan phantom, pad dan grup aed kan dibungkus suatu grup local position, nah posisi rotasi dll dikunci di dalam local position grup parent terluar tersebut, nah ketika scan marker, grup ini bakal muncul sekali diawal, dan grup ini tidak akan berpindah posisi meskipun viewnya kemana mana
+
+lokasi chest (ini posisi di blender btw) terhadap local position:
+x = 10.3996 cm
+y = -59.4737 cm
+z = 38.0625 cm
+
+di depan camera diposisi (btw ini posisi di blender):
+x = -238.542 cm
+y = 0 
+z = 88.2649 cm
+
+muncul card berisi teks instruksi tiap tahapan yang bisa dibaca dan dipahami user
+
+nah, setelah tahap Begin_CPR_now yg kedua dan setelah jeda 2 menit, maka card instruksinya berubah menjadi "Reassessment" terus play sound
+"Stop CPR."
+"Analyzing heart rhythm."
+"Do not touch the patient."/
+
+setelah selesai, card instruksinya berubah teksnya menjadi "Selesai pasien selamat"
